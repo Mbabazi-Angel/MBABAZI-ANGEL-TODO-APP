@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./todo\ image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .todo-content {
+    text-align: center;
+    padding: 50px;
+    color: white;
+  }
+  .container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  #todoInput {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 70%;
+  }
+  button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
