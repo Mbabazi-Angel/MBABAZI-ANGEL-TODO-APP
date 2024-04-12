@@ -1,4 +1,5 @@
 let todos = [];
+//To retain the tasks even after page is refreshed
 // Load todos from local storage when the page is loaded
 window.onload = function() {
     const storedTodos = localStorage.getItem('todos');
@@ -19,11 +20,12 @@ function addTodo() {
         todoInput.value = '';
     }
 }
-
+//call the function with stored tasks
 function saveTodosToLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+//display the tasks
 function displayTodos() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = '';
@@ -43,12 +45,14 @@ function displayTodos() {
     });
 }
 
+//delete tasks
 function deleteTodo(index) {
     todos.splice(index, 1);
     saveTodosToLocalStorage();
     displayTodos();
 }
 
+//edit tasks
 function editTodo(index) {
     const newText = prompt('Enter new text:');
     if (newText !== null && newText.trim() !== '') {
