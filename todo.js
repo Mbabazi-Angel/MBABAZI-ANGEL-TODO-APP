@@ -26,6 +26,7 @@ function saveTodosToLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+//display tasks
 function displayTodos() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = '';
