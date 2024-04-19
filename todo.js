@@ -11,7 +11,7 @@ window.onload = function() {
 
 function addTodo() {
     const todoInput = document.getElementById('todoInput');
-    const todoText = todoInput.value.trim();  
+    const todoText = todoInput.value.trim();
 
     if (todoText !== '') {
         todos.push({ text: todoText, done: false });
@@ -26,7 +26,6 @@ function saveTodosToLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-//display the tasks
 function displayTodos() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = '';
