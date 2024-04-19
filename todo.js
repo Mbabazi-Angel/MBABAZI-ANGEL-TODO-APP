@@ -35,14 +35,14 @@ function displayTodos() {
         const listItem = document.createElement('li');
         listItem.className = 'todo-item';
         listItem.innerHTML = `
-            <input type="checkbox" onchange="toggleDone(${index})" ${todo.done ? 'checked' : ''}>
+            <input type="checkbox" onchange="toggleDone(${index})" ${todo.done ? 'checked' : ''}> 
             <span class="${todo.done ? 'done' : ''}">${todo.text}</span>
             <div class="todo-actions">
                 <button onclick="editTodo(${index})">Edit</button>
                 <button onclick="deleteTodo(${index})">Delete</button>
             </div>
         `;
-        todoList.appendChild(listItem);
+        todoList.appendChild(listItem); 
     });
 }
 
@@ -52,6 +52,10 @@ function deleteTodo(index) {
     saveTodosToLocalStorage();
     displayTodos();
 }
+
+console.log(todos);
+
+
 
 //to edit a task
 function editTodo(index) {
